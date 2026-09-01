@@ -1,5 +1,6 @@
 import {hide,show} from "./mandisplay.js";
 import {getElement, getElementAll} from "./callit.js";
+import {createLoader} from "./loading.js";
 
 const generateJsonHome = getElement("#generateJsonHome");
 const jsonInputPanel = getElement("#jsonInputPanel");
@@ -26,8 +27,16 @@ submitJson.onclick = async function(){
         warningText.textContent = "invalid JSON";  
     }
     else{
+
         hide(jsonInputPanel); 
-        show(jsonOutputPanel); 
+        const betweenLoader = createLoader("10em");
+        document.body.appendChild(betweenLoader);
+
+        setTimeout(() =>{
+            show(jsonOutputPanel); 
+            hide(betweenLoader)
+        }, 3000);
+
     }
 
     

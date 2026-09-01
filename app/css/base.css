@@ -18,4 +18,20 @@ body {
   text-align: center;
 }
 
+.loader {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(0, 0, 0, 0.12);
+  border-top-color: #7cffab;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 12px rgba(124, 255, 171, 0.6);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 
