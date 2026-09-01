@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="center">
+
+    <div id="generateJsonHome">
+        <div class="splashTitle">
+            <h1>SonView<span class="special">_</span></h1>
+            <h2>Stress Free JSON viewer</h2>
+        </div>
+      
+      <button id="enterBtn">Start</button>
+    </div>
+
+    <div id="jsonInputPanel">
+      <textarea id="jsonInput" placeholder="Paste your JSON here..."></textarea>
+      <h4 id="warningText"></h4>
+      <button id="submitJson">Submit</button>
+    </div>
+
+    <div id="jsonOutputPanel"></div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
