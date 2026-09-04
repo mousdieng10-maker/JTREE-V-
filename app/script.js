@@ -18,6 +18,17 @@ enterBtn.onclick = function(){
     show(jsonInputPanel); 
 }
 
+function leaf(){
+    const leaf = document.createElement("div");
+    leaf.classList.add("leaf"); 
+    return leaf; 
+}
+function column(){
+    const side = document.createElement("div");
+    side.classList.add("column")
+    return side
+}
+
 submitJson.onclick = async function(){
 
     warningText.innerHTML = "";
@@ -36,6 +47,7 @@ submitJson.onclick = async function(){
             show(jsonOutputPanel); 
             hide(betweenLoader)
         }, 3000);
+
 
     }
 
